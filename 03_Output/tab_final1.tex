@@ -1,0 +1,81 @@
+
+\begin{center}
+\begin{scriptsize}
+\begin{ThreePartTable}
+\begin{TableNotes}[flushleft]
+\tiny{\item $^{***}p<0.001$; $^{**}p<0.01$; $^{*}p<0.05$.
+       Linear probability model. Covariates are in standard deviations and centered around their mean.
+       Standard errors (in brackets) are calustered at the LSOA level.
+                       \item Basic controls: age (5-year bins), sex, migration background, ethnicity, highest education, marital status, interview month, deprivation battery eligibility.
+                       \item Econ controls: unemployed, household equivalence income.
+                       \item Interaction controls: individual material deprivation interacted with all neighbourhood variables shown above.}
+\end{TableNotes}
+\begin{longtable}{l D{.}{.}{5.6} D{.}{.}{5.6} D{.}{.}{5.6} D{.}{.}{5.6} D{.}{.}{5.6}}
+\caption{LM. Individual and neighbourhood deprivation.}
+\label{table:coefficients}\\
+\hline
+ & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)} \\
+\hline
+\endfirsthead
+\hline
+ & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\insertTableNotes\\
+\endlastfoot
+Individual level                                          &                         &                         &                         &                         &                         \\
+                                                          &                         &                         &                         &                         &                         \\
+\quad Material deprivation                                & 0.026^{***}             & 0.016^{***}             & 0.016^{***}             & 0.020^{***}             & 0.016^{***}             \\
+                                                          & (0.004)                 & (0.004)                 & (0.004)                 & (0.005)                 & (0.004)                 \\
+Neighbourhood level                                       &                         &                         &                         &                         &                         \\
+                                                          &                         &                         &                         &                         &                         \\
+\quad Area deprivation                                    &                         &                         & 0.017^{**}              & 0.017^{***}             & 0.023^{***}             \\
+                                                          &                         &                         & (0.005)                 & (0.005)                 & (0.005)                 \\
+\quad Population density                                  &                         &                         & -0.015^{**}             & -0.014^{*}              & -0.015^{**}             \\
+                                                          &                         &                         & (0.005)                 & (0.006)                 & (0.005)                 \\
+\quad \% age 18-29                                        &                         &                         & -0.007                  & -0.008                  & -0.008                  \\
+                                                          &                         &                         & (0.005)                 & (0.005)                 & (0.005)                 \\
+\quad \% age 65 and above                                 &                         &                         & 0.004                   & 0.004                   & 0.004                   \\
+                                                          &                         &                         & (0.005)                 & (0.005)                 & (0.005)                 \\
+\quad \% foreign nationals                                &                         &                         & -0.033^{***}            & -0.031^{***}            & -0.033^{***}            \\
+                                                          &                         &                         & (0.008)                 & (0.009)                 & (0.008)                 \\
+\quad $\Delta$ house price                                &                         &                         & -0.014^{**}             & -0.015^{**}             & -0.015^{**}             \\
+                                                          &                         &                         & (0.005)                 & (0.005)                 & (0.005)                 \\
+Neighbourhood level 20km                                  &                         &                         &                         &                         &                         \\
+                                                          &                         &                         &                         &                         &                         \\
+\quad $W_{20}$ Area deprivation                           &                         &                         & 0.022^{**}              & 0.020^{*}               & 0.020^{*}               \\
+                                                          &                         &                         & (0.008)                 & (0.008)                 & (0.008)                 \\
+\quad $W_{20}$ Population density                         &                         &                         & -0.015                  & -0.014                  & -0.021                  \\
+                                                          &                         &                         & (0.017)                 & (0.017)                 & (0.017)                 \\
+\quad $W_{20}$ Age 18-29                                  &                         &                         & -0.030^{**}             & -0.030^{**}             & -0.030^{**}             \\
+                                                          &                         &                         & (0.009)                 & (0.010)                 & (0.009)                 \\
+\quad $W_{20}$ Age 65 and above                           &                         &                         & -0.017^{*}              & -0.017^{*}              & -0.019^{*}              \\
+                                                          &                         &                         & (0.008)                 & (0.008)                 & (0.008)                 \\
+\quad $W_{20}$ \% foreign nationals                       &                         &                         & 0.023                   & 0.024                   & 0.024                   \\
+                                                          &                         &                         & (0.015)                 & (0.016)                 & (0.015)                 \\
+\quad $W_{20} \Delta$ house price                         &                         &                         & 0.031                   & 0.027                   & 0.033^{*}               \\
+                                                          &                         &                         & (0.016)                 & (0.016)                 & (0.016)                 \\
+Interactions                                              &                         &                         &                         &                         &                         \\
+                                                          &                         &                         &                         &                         &                         \\
+\quad Mat deprivation $\times$ Area deprivation           &                         &                         &                         & -0.001                  &                         \\
+                                                          &                         &                         &                         & (0.004)                 &                         \\
+\quad Mat deprivation $\times$ $W_{20}$ Area deprivation  &                         &                         &                         & -0.015                  &                         \\
+                                                          &                         &                         &                         & (0.008)                 &                         \\
+\quad Area deprivation $\times$ $W_{20}$ Area deprivation &                         &                         &                         &                         & -0.014^{***}            \\
+                                                          &                         &                         &                         &                         & (0.004)                 \\
+\hline
+Basic controls                                            & \multicolumn{1}{c}{yes} & \multicolumn{1}{c}{yes} & \multicolumn{1}{c}{yes} & \multicolumn{1}{c}{yes} & \multicolumn{1}{c}{yes} \\
+Econ controls                                             & \multicolumn{1}{c}{no}  & \multicolumn{1}{c}{yes} & \multicolumn{1}{c}{yes} & \multicolumn{1}{c}{yes} & \multicolumn{1}{c}{yes} \\
+Interaction controls                                      & \multicolumn{1}{c}{no}  & \multicolumn{1}{c}{no}  & \multicolumn{1}{c}{no}  & \multicolumn{1}{c}{yes} & \multicolumn{1}{c}{no}  \\
+Num. obs.                                                 & 23258                   & 23258                   & 23258                   & 23258                   & 23258                   \\
+R$^2$ (full model)                                        & 0.128                   & 0.135                   & 0.140                   & 0.141                   & 0.141                   \\
+R$^2$ (proj model)                                        & 0.128                   & 0.135                   & 0.140                   & 0.141                   & 0.141                   \\
+Adj. R$^2$ (full model)                                   & 0.126                   & 0.132                   & 0.137                   & 0.137                   & 0.137                   \\
+Adj. R$^2$ (proj model)                                   & 0.126                   & 0.132                   & 0.137                   & 0.137                   & 0.137                   \\
+\end{longtable}
+\end{ThreePartTable}
+\end{scriptsize}
+\end{center}

@@ -1,0 +1,138 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# Replication-Material: Material deprivation and the Brexit referendum: a spatial multilevel analysis of the interplay between individual and regional deprivation.
+
+This repository provides all materials for replication of results in
+
+> Haußmann, C. and Rüttenauer T. (2023) “Material deprivation and the
+> Brexit referendum: a spatial multilevel analysis of the interplay
+> between individual and regional deprivation”, *European Sociological
+> Review*, OnlineFirst.
+
+Published manuscript available here:
+
+Preprint available here: <https://doi.org/10.1093/esr/jcad057>
+
+Date: 2023-09-25
+
+## Set up
+
+The code for replication of the results requires the following folders:
+“01_Script”, “02_Data”, “03_Output”. All Stata and R Scripts are
+required in folder “01_Script”, all data will be save in “02_Data”.
+Original input data (such as Understanding Society, housing prices and
+deprivation data) are also required in “02_Data”.)
+
+To reproduce the results of the paper, the scripts need to be executed
+in the order provided.
+
+The following packages are necessary for reproduction of main results:
+
+``` r
+library(DescTools)
+library(car)
+library(effects)
+library(extrafont)
+library(ggeffects)
+library(gginnards)
+library(ggplot2)
+library(ggstatsplot)
+library(grid)
+library(gridExtra)
+library(haven)
+library(interplot)
+library(lfe)
+library(lme4)
+library(lmtest)
+library(maps)
+library(mapview)
+library(margins)
+library(nomisr)
+library(plm)
+library(plyr)
+library(psych)
+library(readxl)
+library(rgdal)
+library(rgeos)
+library(rmapshaper)
+library(sandwich)
+library(seg)
+library(sf)
+library(spdep)
+library(stargazer)
+library(stars)
+library(texreg)
+library(tmap)
+library(tmaptools)
+library(viridisLite)
+```
+
+### Scripts:
+
+- *01_Long-BHPS-UKHLS_retrival.do*: Prepares the longitudinal file of
+  UKHLS with LSOA identifiers. It requires UKDA-6931-stata and
+  UKDA-7248-stata in the “02_Data” folder.
+
+- *02_API_Census*: Uses the nomisr API to download census 2011
+  statistics. It requires an app key at “Add_your_key_here”.
+
+- *03_Prepare-Macro_IMD*: Prepares the index of multiple deprivation
+  data.
+
+- *04_Prepare-Macro_Census*: Prepares the census and house price data.
+
+- *05_Data-preparation*: Prepares the variables and data of the UKHLS as
+  retrieved earlier.
+
+- *06_Descriptives*: Descriptive maps and supplementary stats.
+
+- *07_Analysis-Micro*: Performs the main analysis and produces the
+  figures of the multilevel analysis.
+
+## Input Data:
+
+The Understanding Society and Harmonised BHPS Special Licence Access
+data (12th Edition) is not publicly available because of privacy
+restrictions, but access can be acquired via the UK Data Service (SN:
+7248, <https://doi.org/10.5255/UKDA-SN-7248-12>) after application. The
+2015 English Index of Multiple Deprivation in online available at
+<https://www.gov.uk/government/statistics/english-indices-of-deprivation-2015>,
+and the 2011 Census data is online available at
+<https://www.nomisweb.co.uk/sources/census_2011>. R 4.2.2 was used for
+data analysis, and code for replication will be made available at
+<https://github.com/ruettenauer/brexit-deprivation>.
+
+Shapefiles on LSOAs and their centroids can be found online at ONS Open
+Geography Portal: <https://geoportal.statistics.gov.uk/>
+
+The following data is required in the “02_Data” folder:
+
+- *UKDA-6931-stata*: Folder containing original Stata data of the BHPS
+  UKHLS data.
+
+- *UKDA-7248-stata*: Folder containing the geo identifiers for the the
+  BHPS UKHLS data.
+
+- \*File_7_ID_2015_All_ranks\_\_deciles_and_scores_for_the_Indices_of_Deprivation\_\_and_population_denominators\*:
+  English indices of deprivation 2015 from
+  <https://www.gov.uk/government/statistics/english-indices-of-deprivation-2015>.
+
+- *EU_referendum_result_data.csv*: Official results from
+  <https://data.london.gov.uk/dataset/eu-referendum-results>
+
+- \*Lower_Layer_Super_Output_Areas\_(December_2011)*Boundaries_Generalised_Clipped*(BGC)\_EW_V3-shp\*:
+  Shapefiles of the 2011 LSOAs.
+
+- \*NUTS_Level_1\_(January_2018)\_Boundaries\*: Shapefiles for NUTS1
+  regions.
+
+- *hpssadataset46medianpricepaidforresidentialpropertiesbylsoa.xls*:
+  Median House Price data from
+  <https://www.ons.gov.uk/peoplepopulationandcommunity/housing/datasets/medianpricepaidbylowerlayersuperoutputareahpssadataset46>.
+
+## System and version information
+
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+Version: R version 4.3.1
